@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+
+    <form-beans>
+			<form-bean name="goAnalysisForm" type="org.yeastrc.compgo.geoduck.www.GOAnalysisForm" />		
+    </form-beans>
+
+  <global-exceptions />
+  <global-forwards />
+
+    <action-mappings>
+
+		<action path="/goAnalysis" type="org.yeastrc.compgo.geoduck.www.GOAnalysisAction"
+			input="/pages/goAnalysisForm.jsp" name="goAnalysisForm"
+			scope="request" validate="true">
+			<forward name="image" path="/pages/showRasterImage.jsp" redirect="false" />
+			<forward name="report" path="/pages/showReport.jsp" redirect="false" />
+		</action>
+
+
+    </action-mappings>
+
+  <message-resources parameter="com.yourcompany.struts.ApplicationResources" />
+</struts-config>
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/goAnalysis.do" location="50,50" dimension="312,96" />
+  <StrutsActivity path="/pages/showReport.jsp" location="650,50" dimension="152,51" />
+  <StrutsActivity path="/pages/showRasterImage.jsp" location="950,50" dimension="182,51" />
+  <StrutsActivity path="/pages/goAnalysisForm.jsp" location="50,250" dimension="174,51" />
+  <StrutsTransition id="/goAnalysis.do,report,/pages/showReport.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/goAnalysis.do,image,/pages/showRasterImage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pages/goAnalysisForm.jsp,null,/goAnalysis.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

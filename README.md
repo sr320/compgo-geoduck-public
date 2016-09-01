@@ -59,3 +59,11 @@ CREATE TABLE `go_annotation` (
 )
 ```
 
+Populating the go_annotation table
+------------------------------------
+The go_annotation table must be pre-populated to perform the analysis. In this study, this table was populated using this method:
+
+  1. Download GO annotations from Uniprot (http://www.uniprot.org/downloads). Download gene_association.goa_uniprot
+  2. Parse file into a temporary go_annotation table The columns in the database table and file should match. Can be imported using LOAD DATA INFILE. In this example, data were loaded into ``compgo_uniprot.go_annotation``.
+  3. The Perl script in perl_scripts/populateGOAnnotations.pl was run, which uses the BLAST mapping of the geoduck proteins to Uniprot to create a ``go_annotation`` table containing the geoduck protein accession strings associated with the GO annotations for the Uniprot BLAST hits.
+  

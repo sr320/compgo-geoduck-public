@@ -24,7 +24,7 @@ About the database
 -----------------------
 The Java code requires a MySQL database with two tables: ``go_annotation`` and ``go_protein_counts``. The ``go_annotation``
 table holds the GO annotations associated with protein accession strings, and go_protein_counts are the cached counts for
-the number of GO terms associated with protein accession strings. The table definitions are:
+the number of protenis associated with GO terms. The table definitions are:
 
 ```sql
 CREATE TABLE `go_protein_counts` (
